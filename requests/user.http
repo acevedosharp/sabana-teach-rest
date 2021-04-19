@@ -1,0 +1,21 @@
+POST http://localhost:2710/sign-up
+Content-Type: application/json
+
+{
+  "firstName": "Jose",
+  "lastName": "Acevedo",
+  "email": "acevedosharp@hotmail.com",
+  "rawPassword": "password",
+  "role": "STUDENT"
+}
+
+###
+
+POST http://localhost:2710/sign-in
+Content-Type: application/json
+
+{
+  "email": "acevedosharp@hotmail.com",
+  "rawPassword": "password"
+}
+
