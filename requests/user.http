@@ -1,4 +1,4 @@
-POST http://localhost:2710/sign-up
+POST http://sabana-teach-rest.herokuapp.com/sign-up
 Content-Type: application/json
 
 {
@@ -11,11 +11,15 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:2710/sign-in
+POST http://sabana-teach-rest.herokuapp.com/sign-in
 Content-Type: application/json
 
 {
   "email": "acevedosharp@hotmail.com",
   "rawPassword": "password"
 }
+
+###
+
+GET http://sabana-teach-rest.herokuapp.com/users
 

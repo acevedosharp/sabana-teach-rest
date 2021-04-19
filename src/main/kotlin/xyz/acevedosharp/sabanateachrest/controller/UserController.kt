@@ -2,6 +2,7 @@ package xyz.acevedosharp.sabanateachrest.controller
 
 import org.springframework.http.ResponseEntity
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
@@ -46,4 +47,7 @@ class UserController(
             return ResponseEntity.badRequest().body("Contraseña incorrecta.")
         }
     }
+
+    @GetMapping("/users")
+    fun allUsers() = userRepo.findAll()
 }
