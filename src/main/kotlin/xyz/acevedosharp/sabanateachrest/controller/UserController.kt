@@ -2,10 +2,7 @@ package xyz.acevedosharp.sabanateachrest.controller
 
 import org.springframework.http.ResponseEntity
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import xyz.acevedosharp.sabanateachrest.model.user.SignInUser
 import xyz.acevedosharp.sabanateachrest.model.user.SignUpUser
 import xyz.acevedosharp.sabanateachrest.model.user.User
@@ -50,4 +47,7 @@ class UserController(
 
     @GetMapping("/users")
     fun allUsers() = userRepo.findAll()
+
+    @DeleteMapping("/users")
+    fun deleteAllUsers() = userRepo.deleteAll()
 }
