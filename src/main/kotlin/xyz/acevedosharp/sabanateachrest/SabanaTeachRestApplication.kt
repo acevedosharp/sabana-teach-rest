@@ -21,14 +21,8 @@ fun main(args: Array<String>) {
 
 
 @Configuration
-class MyConfiguration {
-    @Bean
-    fun corsConfigurer(): WebMvcConfigurer {
-        return object : WebMvcConfigurerAdapter() {
-            override fun addCorsMappings(registry: CorsRegistry) {
-                registry.addMapping("/**")
-                    .allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH")
-            }
-        }
+class WebConfiguration : WebMvcConfigurer {
+    override fun addCorsMappings(registry: CorsRegistry) {
+        registry.addMapping("/**").allowedMethods("*")
     }
 }
