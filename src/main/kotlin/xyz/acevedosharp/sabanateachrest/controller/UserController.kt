@@ -33,15 +33,15 @@ class UserController(
     }
 
     @PostMapping("/sign-in")
-    fun signIn(@RequestBody user: SignInUser): ResponseEntity<String> {
+    fun signIn(@RequestBody user: SignInUser): User {
         val persistedUser = userRepo.findByEmail(user.email)
-            ?: return ResponseEntity.badRequest().body("Email incorrecto.")
+            ?: throw RuntimeException("No such user.")
 
         if (bCryptPasswordEncoder.matches(user.rawPassword, persistedUser.passwordHash)) {
             // TODO: create and give token
-            return ResponseEntity.ok().body("Ingreso exitoso.")
+            return persistedUser
         } else {
-            return ResponseEntity.badRequest().body("Contraseña incorrecta.")
+            throw RuntimeException("Incorrent password.")
         }
     }
 

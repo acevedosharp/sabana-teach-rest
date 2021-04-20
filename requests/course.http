@@ -1,0 +1,58 @@
+GET http://localhost:2710/courses
+
+###
+
+GET http://localhost:2710/courses/1
+
+###
+
+POST http://localhost:2710/courses
+Content-Type: application/json
+
+{
+  "title": "React.js",
+  "description": "Aprende React.js con este curso. Desde lo fundamental como HTML/CSS, una sobrevista de JavaScript hasta aplicaciones web listas para servir al mundo.",
+  "duration": "4 meses",
+  "teacher": "Cristian Paredes",
+  "isCertified": "false",
+  "tags": "JavaScript,React.js,HTML,CSS",
+  "introVideoUrl": "https://www.youtube.com/watch?v=w7ejDZ8SWv8",
+  "lessons": [
+      {
+          "title": "HTML",
+          "description": "Aprende HTML.",
+          "transcript": "Este es el transcript, mucho texto.",
+          "videoUrl": "https://www.youtube.com/watch?v=pQN-pnXPaVg"
+      },
+      {
+          "title": "JavaScript",
+          "description": "Aprende JavaScript.",
+          "transcript": "Este es el transcript, mucho texto.",
+          "videoUrl": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+      },
+      {
+          "title": "React.js",
+          "description": "Aprende React.js.",
+          "transcript": "Este es el transcript, mucho texto.",
+          "videoUrl": "https://www.youtube.com/watch?v=DLX62G4lc44"
+      }
+  ]
+}
+
+###
+
+POST http://localhost:2710/courses/enroll
+Content-Type: application/json
+
+{
+    "courseId": 1,
+    "userId": 1
+}
+
+###
+
+GET http://localhost:2710/courses/user/1
+
+###
+
+POST http://localhost:2710/courses/progress/3

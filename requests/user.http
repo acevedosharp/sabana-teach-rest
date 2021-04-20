@@ -23,3 +23,7 @@ Content-Type: application/json
 
 GET http://sabana-teach-rest.herokuapp.com/users
 
+###
+
+DELETE http://sabana-teach-rest.herokuapp.com/users
+
