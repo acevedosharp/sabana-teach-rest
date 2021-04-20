@@ -22,19 +22,19 @@ Content-Type: application/json
           "title": "HTML",
           "description": "Aprende HTML.",
           "transcript": "Este es el transcript, mucho texto.",
-          "videoUrl": "https://www.youtube.com/watch?v=pQN-pnXPaVg"
+          "videoUrl": "https://www.youtube.com/embed/pQN-pnXPaVg"
       },
       {
           "title": "JavaScript",
           "description": "Aprende JavaScript.",
           "transcript": "Este es el transcript, mucho texto.",
-          "videoUrl": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          "videoUrl": "https://www.youtube.com/embed/PkZNo7MFNFg"
       },
       {
           "title": "React.js",
           "description": "Aprende React.js.",
           "transcript": "Este es el transcript, mucho texto.",
-          "videoUrl": "https://www.youtube.com/watch?v=DLX62G4lc44"
+          "videoUrl": "https://www.youtube.com/embed/DLX62G4lc44"
       }
   ]
 }
@@ -51,11 +51,11 @@ Content-Type: application/json
 
 ###
 
-GET http://sabana-teach-rest.herokuapp.com/courses/user/1
+GET http://sabana-teach-rest.herokuapp.com/courses/user/14
 
 ###
 
-POST http://sabana-teach-rest.herokuapp.com/courses/progress/3
+POST http://sabana-teach-rest.herokuapp.com/courses/progress/9
 
 ###
 
