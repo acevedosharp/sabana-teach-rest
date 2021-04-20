@@ -56,3 +56,7 @@ GET http://sabana-teach-rest.herokuapp.com/courses/user/1
 ###
 
 POST http://sabana-teach-rest.herokuapp.com/courses/progress/3
+
+###
+
+DELETE http://sabana-teach-rest.herokuapp.com/courses

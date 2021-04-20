@@ -127,6 +127,7 @@ class CourseController(
     fun deleteEverything() {
         courseProgressRepo.deleteAll()
         courseEnrollmentRepo.deleteAll()
+        lessonRepo.deleteAll()
         courseRepo.deleteAll()
     }
 }
