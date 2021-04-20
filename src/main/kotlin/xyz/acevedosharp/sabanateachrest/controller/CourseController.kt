@@ -122,4 +122,11 @@ class CourseController(
             )
         )
     }
+
+    @DeleteMapping("/courses")
+    fun deleteEverything() {
+        courseProgressRepo.deleteAll()
+        courseEnrollmentRepo.deleteAll()
+        courseRepo.deleteAll()
+    }
 }
